@@ -5,6 +5,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class TankFrame extends Frame {
+    int x = 200, y = 200;
     public TankFrame() {
         this.setResizable(false);
         this.setSize(800, 600);
@@ -20,10 +21,9 @@ public class TankFrame extends Frame {
     }
     @Override
     public void paint(Graphics g) {
-        g.setColor(Color.RED);
-        g.drawString("Hello", 100, 100);
-    }
-    public static void main(String[] args) {
-        TankFrame t = new TankFrame();
-    }
+        System.out.println("paint");
+        g.fillRect(x, y, 50, 50);
+        x += 10;
+        y += 10;
+     }
 }
